@@ -1,0 +1,24 @@
+# project-directory/roles/git-maven/tasks/main.yml
+---
+- name: Create directories
+  file:
+    path: "{{ item }}"
+    state: directory
+  loop: "{{ create_directories }}"
+
+- name: Create multiple files
+  file:
+    path: "{{ item.path }}"
+    state: touch
+  loop:
+    - { path: '/tmp/sample_file1' }
+    - { path: '/tmp/sample_file2' }
+    - { path: '/tmp/sample_file3' }
+    - { path: '/tmp/sample_file4' }
+    - { path: '/tmp/sample_file5' }
+
+- name: Remove directories
+  file:
+    path: "{{ item }}"
+    state: absent
+  loop: "{{ delete_directories }}"

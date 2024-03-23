@@ -1,0 +1,8 @@
+# project-directory/roles/git-maven/vars/main.yml
+create_directories:
+  - /tmp/create_dir1
+  - /tmp/create_dir2
+  - /tmp/create_dir3
+
+delete_directories:
+  - /tmp/delete_dir1

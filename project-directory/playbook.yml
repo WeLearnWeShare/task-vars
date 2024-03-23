@@ -1,0 +1,6 @@
+# project-directory/playbook.yml
+
+---
+- hosts: localhost
+  roles:
+    - git-maven
